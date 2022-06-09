@@ -1,6 +1,6 @@
 #include <iostream>
-#include <vector>
 #include <random>
+#include <vector>
 using namespace std;
 
 int repeatedNTimes(vector<int> nums) {
@@ -16,13 +16,14 @@ int repeatedNTimes(vector<int> nums) {
     }
 }
 
-#define ASSERT(except, actual) \
-{ \
-    auto res = actual; \
-    if (except != res) { \
-        cout << #actual << "\nexcept: "#except", but found: " << res << "\n"; \
-    } \
-}
+#define ASSERT(except, actual)                                                 \
+    {                                                                          \
+        auto res = actual;                                                     \
+        if (except != res) {                                                   \
+            cout << #actual << "\nexcept: " #except ", but found: " << res     \
+                 << "\n";                                                      \
+        }                                                                      \
+    }
 
 int main() {
     ASSERT(3, repeatedNTimes({1, 2, 3, 3}));
